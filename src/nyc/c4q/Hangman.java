@@ -48,8 +48,4 @@ public class Hangman {
     public boolean guessedSuccessfully() {
         return mSecretWord.isGuessed();
     }
-
-    public void printCurrentword() {
-    }
-
 }
