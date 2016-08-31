@@ -7,13 +7,13 @@ public class Hangman {
     private final SecretWord mSecretWord;
     private char mLastGuess;
     private int mMisses = 0;
+    private Hangman hangman;
 
-    public Hangman(){
+    public Hangman() {
         mSecretWord = new SecretWord();
     }
 
-
-    public int getMisses(){
+    public int getMisses() {
         return mMisses;
     }
 
@@ -29,7 +29,6 @@ public class Hangman {
 
     public boolean checkLetter() {
         if (mSecretWord.isLetter(mLastGuess)) {
-            // If letter is in word do something
             mSecretWord.set(mLastGuess);
             return true;
         } else {
@@ -38,7 +37,7 @@ public class Hangman {
         }
     }
 
-    public void printCurrentWord(){
+    public void printCurrentWord() {
         System.out.println(mSecretWord);
     }
 
@@ -49,4 +48,8 @@ public class Hangman {
     public boolean guessedSuccessfully() {
         return mSecretWord.isGuessed();
     }
+
+    public void printCurrentword() {
+    }
+
 }
